@@ -1,0 +1,102 @@
+@import url(root.css);
+
+
+/*Leftside */
+.bundleword{
+    -webkit-writing-mode: vertical-rl;
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding: 0;
+    margin: 0;
+}
+.bundlebox{
+    border: 1px solid var(--color3);
+    border-radius: 15px;
+    background: linear-gradient(
+        to left,
+		rgba(208, 187, 148, 0.741) 30%,
+		rgba(74, 44, 42, 0.763) 97%
+	);
+}
+.bundlebox label{
+    color: #000;
+}
+
+
+/*Right Side*/
+.gallery img{
+    width:  100px;
+    height: 100px;
+    border-radius: 50%;
+
+}
+.menubox{
+    padding: 50px;
+    overflow: auto;
+    height: 70vh;
+}
+.gallery{
+    background: linear-gradient(
+		to bottom, 
+		rgba(208, 187, 148, 0.741) 10%,
+		rgba(74, 44, 42, 0.763) 67%
+	);
+    padding: 25px;
+    border-radius: 50px;
+    border: 1px solid var(--color3);
+    color: white;
+}
+.gallery label{
+    font-weight: bolder;
+}
+.gallery label span{
+    font-weight: normal;
+}
+.gallery input[type="checkbox"] {
+    width: 15px;                         /* Set width */
+    height: 15px; 
+    clip-path: circle(46% at 50% 50%); 
+}
+
+.menubox::-webkit-scrollbar {
+    width: 5px;
+}
+.menubox::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+.menubox::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+		to bottom, 
+		rgba(208, 187, 148, 0.741) 30%,
+		rgba(74, 44, 42, 0.763) 77%
+	);
+    outline: 1px solid slategrey;
+}
+
+
+.orderdetails::-webkit-scrollbar {
+    width: 5px;
+}
+.orderdetails::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+.orderdetails::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+		to bottom, 
+		rgba(208, 187, 148, 0.741) 30%,
+		rgba(74, 44, 42, 0.763) 77%
+	);
+    outline: 1px solid slategrey;
+}
+
+.sub-menu{
+    display: none;
+    max-height: 40vh;
+}
+
+.text-color{
+    color: var(--color1);
+}

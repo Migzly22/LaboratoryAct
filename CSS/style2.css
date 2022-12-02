@@ -1,0 +1,48 @@
+@import url(root.css);
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: var(--color2);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+		to bottom, 
+		rgba(208, 187, 148, 0.741) 30%,
+		rgba(74, 44, 42, 0.763) 77%
+	);
+}
+
+
+
+
+
+
+.leftsideofall{
+    background: var(--color2);
+    color: white;
+}
+.toplevel{
+    border-right: 5px solid var(--color1) ;
+    color: var(--color1);
+}
+.form-label img{
+    border: 3px solid var(--color1);
+    border-radius: 50%;
+    width:200px;
+}
+
+/*Img browse*/
+.specialbtn{
+    background: transparent;
+    border-color: var(--color1);
+    color: var(--color1);
+}
+.specialbtn:hover{
+    background-color: var(--color1);
+    border-color: var(--color1);
+    color: var(--color2);
+}
+
