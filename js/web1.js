@@ -72,10 +72,20 @@ $(document).ready(function() {
     }
 
     function calculatebills_button (price,quantity) {
-        price = $("#price").val() - 0;
-        quantity = $("#quantity").val() - 0;
+        price = $("#price").val();
+        quantity = $("#quantity").val();
 
         //FORMULAS FOR DISCOUNT AND DISCOUNTED AMOUNT
+
+        if (price.length == 0) {
+            alert("Please Select An Item First")
+            return 0
+        }else if (quantity.length == 0){
+            alert("Please Enter The Quantity")
+            return 0
+        }
+
+
         discount_amount = (price * quantity) * 0.10;
         discounted_amount = (price * quantity) - discount_amount;
         document.getElementById("discount_amount").value = discount_amount;
@@ -85,15 +95,28 @@ $(document).ready(function() {
     }
 
     function change_button (cash_given,discounted_amount,total_bills,total_quantity) {
-        cash_given = $("#cash_given").val() - 0;
-    discounted_amount = $("#discounted_amount").val() - 0;
-    quantity = $("#quantity").val() - 0;
+        cash_given = $("#cash_given").val() ;
+        discounted_amount = $("#discounted_amount").val() ;
+        quantity = $("#quantity").val() - 0;
 
-    //FORMULA FOR CHANGE
-    change = cash_given - discounted_amount;
-    document.getElementById("change").value = change;
-    document.getElementById("total_bills").value += discounted_amount;
-    document.getElementById("total_quantity").value += quantity;
+        if(discount_amount.length == undefined){
+            alert("Discounted Amount Has no Value. Please Try Again")
+            return 0
+        }
+
+        //FORMULA FOR CHANGE
+        change = cash_given - discounted_amount;
+
+        document.getElementById("total_bills").value = discounted_amount;
+        document.getElementById("total_quantity").value = quantity;
+
+        if(change < 0){
+            alert("Incorrect Amount. Please Try Again")
+        }else{
+            document.getElementById("change").value = change;
+        }
+        
+
 
     }
 
