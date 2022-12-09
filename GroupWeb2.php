@@ -3,18 +3,18 @@
     session_start();
     if (isset($_SESSION["logged"])) {
         if ( $_SESSION["logged"] != "Web2") {
-            header("Location:./Login.php");
+            header("Location:./index.php");
             exit;
         }
     }else{
-        header("Location:./Login.php");
+        header("Location:./index.php");
         exit;
     }
 
     /*Oncick event of Exit btn */
     if (isset($_POST["exit"])){
         unset($_SESSION["logged"]);
-        header("Location:./Login.php");
+        header("Location:./index.php");
         exit;
     }
 
@@ -68,7 +68,7 @@
     $facultysavingsloan ="";
     $salaryloan ="";
     $totaldeductions ="";
-
+    $totalotherdeduction = "";
     $netincome = "";
 
     /*computation*/
@@ -253,7 +253,7 @@
         $facultysavingsdeposit = $_POST['facultysavingsdeposit'];
         $facultysavingsloan = $_POST['facultysavingsloan'];
         $salaryloan = $_POST['salaryloan'];
-        $totalotherdeduction = $sssloan + $pagibigloan + $facultysavingsdeposit + $facultysavingsloan + $salaryloan ;
+        //$totalotherdeduction = $sssloan + $pagibigloan + $facultysavingsdeposit + $facultysavingsloan + $salaryloan ;
 
     }
 
@@ -470,7 +470,8 @@
 
     <link rel="stylesheet" href="./CSS/style2.css">
 
-    <script src="./js/file.js"></script>
+    <script src="./js/file.js" defer></script>
+    <script src="./js/web2.js" defer></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -500,37 +501,37 @@
                                 <div class="mb-1 row">
                                     <label for="empnumber" class="col-sm-5 col-form-label">Employee Number</label>
                                     <div class="col-sm-7">
-                                        <input type="text"  value="<?php echo $empnumber; ?>" class="form-control" id="empnumber" name="empnumber" size="20"  >
+                                        <input type="text"   value="<?php echo $empnumber; ?>" class="form-control" id="empnumber" name="empnumber" size="20"  >
                                     </div>
                                 </div>
                                 <div class="mb-1 row">
                                     <label for="fname" class="col-sm-5 col-form-label">First Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" value="<?php echo $fname; ?>" class="form-control" id="fname" name="fname" size="20"  >
+                                        <input type="text"  value="<?php echo $fname; ?>" class="form-control" id="fname" name="fname" size="20"  >
                                     </div>
                                 </div>
                                 <div class="mb-1 row">
                                     <label for="mname" class="col-sm-5 col-form-label">Middle Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" value="<?php echo $mname; ?>" class="form-control" id="mname" name="mname" size="20"  >
+                                        <input type="text"  value="<?php echo $mname; ?>" class="form-control" id="mname" name="mname" size="20"  >
                                     </div>
                                 </div>
                                 <div class="mb-1 row">
                                     <label for="sname" class="col-sm-5 col-form-label">Surname</label>
                                     <div class="col-sm-7">
-                                        <input type="text"  value="<?php echo $sname; ?>" class="form-control" id="sname" name="sname" size="20"  >
+                                        <input type="text"   value="<?php echo $sname; ?>" class="form-control" id="sname" name="sname" size="20"  >
                                     </div>
                                 </div>
                                 <div class="mb-1 row">
                                     <label for="civilstatus" class="col-sm-5 col-form-label">Civil Status</label>
                                     <div class="col-sm-7">
-                                        <input type="text" value="<?php echo $civilstatus; ?>" class="form-control" id="civilstatus" name="civilstatus" size="20"  >
+                                        <input type="text"  value="<?php echo $civilstatus; ?>" class="form-control" id="civilstatus" name="civilstatus" size="20"  >
                                     </div>
                                 </div>
                                 <div class="mb-1 row">
                                     <label for="designation" class="col-sm-5 col-form-label">Designation</label>
                                     <div class="col-sm-7">
-                                        <input type="text" value="<?php echo $designation; ?>" class="form-control" id="designation" name="designation" size="20"  >
+                                        <input type="text"  value="<?php echo $designation; ?>" class="form-control" id="designation" name="designation" size="20"  >
                                     </div>
                                 </div>
                 
@@ -540,7 +541,7 @@
                                 <div class="mb-1 row">
                                     <label for="qualified_dependent_status" class="col-sm-5 col-form-label">Qualified Dependents</label>
                                     <div class="col-sm-7">
-                                        <input type="text" value="<?php echo $qualified_dependent_status; ?>" class="form-control" id="qualified_dependent_status" name="qualified_dependent_status" size="20"  >
+                                        <input type="text"  value="<?php echo $qualified_dependent_status; ?>" class="form-control" id="qualified_dependent_status" name="qualified_dependent_status" size="20"  >
                                     </div>
                                 </div>
                                 <div class="mb-1 row">
@@ -552,19 +553,19 @@
                                 <div class="mb-1 row">
                                     <label for="paydate" class="col-sm-5 col-form-label">Paydate</label>
                                     <div class="col-sm-7">
-                                        <input type="date" value="<?php echo $paydate; ?>" class="form-control" id="paydate" name="paydate" size="20"  >
+                                        <input type="date"  value="<?php echo $paydate; ?>" class="form-control" id="paydate" name="paydate" size="20"  >
                                     </div>
                                 </div>
                                 <div class="mb-1 row">
                                     <label for="empstatus" class="col-sm-5 col-form-label">Employee Status</label>
                                     <div class="col-sm-7">
-                                        <input type="text" value="<?php echo $empstatus; ?>" class="form-control" id="empstatus" name="empstatus" size="20"  >
+                                        <input type="text"  value="<?php echo $empstatus; ?>" class="form-control" id="empstatus" name="empstatus" size="20"  >
                                     </div>
                                 </div>
                                 <div class="mb-1 row">
                                     <label for="department1" class="col-sm-5 col-form-label">Department</label>
                                     <div class="col-sm-7">
-                                        <input type="text" value="<?php echo $department1; ?>" class="form-control" id="department1" name="department1" size="20"  >
+                                        <input type="text"  value="<?php echo $department1; ?>" class="form-control" id="department1" name="department1" size="20"  >
                                     </div>
                                 </div>
                         </div>  
@@ -580,13 +581,13 @@
                             <div class="mb-1 row">
                                 <label for="rateperhour" class="col-sm-5 col-form-label">Rate / Hour </label>
                                 <div class="col-sm-7">
-                                    <input type="number" value="<?php echo($rateperhour) ?>"  class="form-control text-end" id="rateperhour" name="rateperhour" placeholder="0.00" >
+                                    <input type="number"  value="<?php echo($rateperhour) ?>"  class="form-control text-end" id="rateperhour" name="rateperhour" placeholder="0.00" >
                                 </div>
                             </div>
                             <div class="mb-1 row">
                                 <label for="cutoff" class="col-sm-5 col-form-label">No. of Hours / Cut off </label>
                                 <div class="col-sm-7">
-                                    <input type="number" value="<?php echo($cutoff) ?>" class="form-control text-end" id="cutoff" name="cutoff"  placeholder="0.00">
+                                    <input type="number"  value="<?php echo($cutoff) ?>" class="form-control text-end" id="cutoff" name="cutoff"  placeholder="0.00">
                                 </div>
                             </div>
                             <div class="mb-1 row">
@@ -601,13 +602,13 @@
                             <div class="mb-1 row">
                                 <label for="rateperhour2" class="col-sm-5 col-form-label">Rate / Hour </label>
                                 <div class="col-sm-7">
-                                    <input type="number" value="<?php echo($rateperhour2) ?>" class="form-control text-end" id="rateperhour2" name="rateperhour2" placeholder="0.00"  >
+                                    <input type="number" value="<?php echo($rateperhour2) ?>"  class="form-control text-end" id="rateperhour2" name="rateperhour2" placeholder="0.00"  >
                                 </div>
                             </div>
                             <div class="mb-1 row">
                                 <label for="cutoff2" class="col-sm-5 col-form-label">No. of Hours/ Cut off </label>
                                 <div class="col-sm-7">
-                                    <input type="number" value="<?php echo($cutoff2)?>" class="form-control text-end" id="cutoff2" name="cutoff2" placeholder="0.00" >
+                                    <input type="number" value="<?php echo($cutoff2)?>"  class="form-control text-end" id="cutoff2" name="cutoff2" placeholder="0.00" >
                                 </div>
                             </div>
                             <div class="mb-1 row">
@@ -622,13 +623,13 @@
                             <div class="mb-1 row">
                                 <label for="rateperhour3" class="col-sm-5 col-form-label">Rate / Hour </label>
                                 <div class="col-sm-7">
-                                    <input type="number" value="<?php echo($rateperhour3) ?>" class="form-control text-end" id="rateperhour3" name="rateperhour3" placeholder="0.00"  >
+                                    <input type="number" value="<?php echo($rateperhour3) ?>"  class="form-control text-end" id="rateperhour3" name="rateperhour3" placeholder="0.00"  >
                                 </div>
                             </div>
                             <div class="mb-1 row">
                                 <label for="cutoff3" class="col-sm-5 col-form-label">No. of Hours/ Cut off </label>
                                 <div class="col-sm-7">
-                                    <input type="number" value="<?php echo($cutoff3) ?>" class="form-control text-end" id="cutoff3" name="cutoff3" placeholder="0.00" >
+                                    <input type="number" value="<?php echo($cutoff3) ?>"  class="form-control text-end" id="cutoff3" name="cutoff3" placeholder="0.00" >
                                 </div>
                             </div>    
                             <div class="mb-1 row">
@@ -688,31 +689,31 @@
                             <div class="mb-1 row">
                                 <label for="sssloan" class="col-sm-5 col-form-label">SSS Loan </label>
                                 <div class="col-sm-7">
-                                    <input type="text" value="<?php echo($sssloan) ?>" class="form-control text-end" id="sssloan" name="sssloan" placeholder="0.00" >
+                                    <input type="text" value="<?php echo($sssloan) ?>"  class="form-control text-end" id="sssloan" name="sssloan" placeholder="0.00" >
                                 </div>
                             </div>
                             <div class="mb-1 row">
                                 <label for="pagibigloan" class="col-sm-5 col-form-label">Pagibig Loan </label>
                                 <div class="col-sm-7">
-                                    <input type="text" value="<?php echo($pagibigloan) ?>" class="form-control text-end" id="pagibigloan" name="pagibigloan" placeholder="0.00" >
+                                    <input type="text" value="<?php echo($pagibigloan) ?>"   class="form-control text-end" id="pagibigloan" name="pagibigloan" placeholder="0.00" >
                                 </div>
                             </div>
                             <div class="mb-1 row">
                                 <label for="facultysavingsdeposit" class="col-sm-5 col-form-label">Faculty Savings Deposit</label>
                                 <div class="col-sm-7">
-                                    <input type="text" value="<?php echo($facultysavingsdeposit) ?>" class="form-control text-end" id="facultysavingsdeposit" name="facultysavingsdeposit" placeholder="0.00" >
+                                    <input type="text" value="<?php echo($facultysavingsdeposit) ?>"  class="form-control text-end" id="facultysavingsdeposit" name="facultysavingsdeposit" placeholder="0.00" >
                                 </div>
                             </div>
                             <div class="mb-1 row">
                                 <label for="facultysavingsloan" class="col-sm-5 col-form-label">Faculty Savings Loan</label>
                                 <div class="col-sm-7">
-                                    <input type="text" value="<?php echo($facultysavingsloan) ?>" class="form-control text-end" id="facultysavingsloan" name="facultysavingsloan" placeholder="0.00" >
+                                    <input type="text" value="<?php echo($facultysavingsloan) ?>"  class="form-control text-end" id="facultysavingsloan" name="facultysavingsloan" placeholder="0.00" >
                                 </div>
                             </div>
                             <div class="mb-1 row">
                                 <label for="salaryloan" class="col-sm-5 col-form-label">Salary Loan</label>
                                 <div class="col-sm-7">
-                                    <input type="text" value="<?php echo($salaryloan) ?>" class="form-control text-end" id="salaryloan" name="salaryloan" placeholder="0.00" >
+                                    <input type="text" value="<?php echo($salaryloan) ?>"  class="form-control text-end" id="salaryloan" name="salaryloan" placeholder="0.00" >
                                 </div>
                             </div>
                             <div class="mb-1 row">
@@ -741,15 +742,19 @@
         </div>
         <section class="footer fixed-bottom p-2">
             <div class="btnscontrol d-flex justify-content-center gap-3  align-items-center">
-                <input type="submit" class="btn" name="calculate" id="calculate" value="CALCULATE GROSS INCOME">
+                <input type="submit" class="btn" name="calculate" id="calculateid" value="CALCULATE GROSS INCOME">
                 <input type="submit" class="btn " name="net" id="net" value="CALCULATE NET INCOME">
                 <input type="submit" class="btn "name="new" id="new" value="NEW" >
                 <input type="submit" class="btn " value="CANCEL" >   
                 <input type="submit" class="btn " value="PRINT PAYSLIP  ">
                 <input type="submit" class="btn" value="PREVIEW PAYSLIP DETAILS">
-                <input type="submit" class="btn" name="exit" value="EXIT">
+    </form>
+                <form action="" method="POST">
+                    <input type="submit" class="btn" name="exit" value="EXIT">
+                </form>
+                
             </div>
         </section>
-    </form>
+    
 </body>
 </html>

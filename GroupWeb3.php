@@ -2,17 +2,17 @@
     session_start();
     if (isset($_SESSION["logged"])) {
         if ( $_SESSION["logged"] != "Web3") {
-            header("Location:./Login.php");
+            header("Location:./index.php");
             exit;
         }
     }else{
-        header("Location:./Login.php");
+        header("Location:./index.php");
         exit;
     }
 
     if (isset($_POST["exit"])){
         unset($_SESSION["logged"]);
-        header("Location:./Login.php");
+        header("Location:./index.php");
         exit;
     }
 
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="./CSS/style31.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./js/web3.js" defer></script>
+    <script src="./js/web3p1.js" defer></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
