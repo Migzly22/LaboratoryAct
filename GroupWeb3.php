@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="./CSS/style31.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./js/web3p1.js" defer></script>
+    <script src="./js/web3.js" defer></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -292,7 +292,7 @@
                         <button type="button" class="btn " id="change">Change</button>
                         <button type="button" class="btn " id="newbtn">New</button>
                         <button type="button" class="btn " id="numpad">Numpad</button>
-                        <button type="button" class="btn ">Cancel</button>
+                        <button type="button" class="btn " id="cancel">Cancel</button>
                         <input type="submit" class="btn" name="exit" value="Exit">
                     </form>
                 </div>
