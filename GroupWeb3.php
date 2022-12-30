@@ -30,8 +30,9 @@
     <link rel="stylesheet" href="./CSS/style1.css">
     <link rel="stylesheet" href="./CSS/style31.css">
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./js/web3.js" defer></script>
+    <script src="./js/web31.js" defer></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">

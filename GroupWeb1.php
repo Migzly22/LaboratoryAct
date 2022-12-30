@@ -31,8 +31,9 @@
 
     <link rel="stylesheet" href="./CSS/style12.css">
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./js/web1p1.js" defer></script>
+    <script src="./js/web1.js" defer></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
