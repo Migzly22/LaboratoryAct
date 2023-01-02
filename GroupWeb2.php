@@ -95,164 +95,21 @@
 
         /*Regular Deductions*/
         $sss_contribution = $gross_income*.045;
-        /*sss contribution                 
-            if($gross_income>= 1000 && $gross_income<=1249){ 
-                $sss_contribution=73.70; 
-            } else if($gross_income>=1250 && $gross_income<=1749){                     
-                $sss_contribution=110.50; 
-            } else if($gross_income>=1750 && $gross_income<=2249){ 
-                $sss_contribution=147.30; 
-            } else if($gross_income>=2250 && $gross_income<=2749.99){                     
-                $sss_contribution=184.20; 
-            } else if($gross_income>=2750 && $gross_income<=3249.99){                     
-                $sss_contribution=221.00; 
-            } else if($gross_income>=3250 && $gross_income<=3749.99){                     
-                $sss_contribution=257.80; 
-            } else if($gross_income>=3750 && $gross_income<=4249.99){                     
-                $sss_contribution=294.70; 
-            } else if($gross_income>=4250 && $gross_income<=4749.99){                     
-                $sss_contribution=331.50; 
-            } else if($gross_income>=4750 && $gross_income<=5249.99){                     
-                $sss_contribution=368.30; 
-            } else if($gross_income>=5250 && $gross_income<=5749.99){                     
-                $sss_contribution=405.20; 
-            } else if($gross_income>=5750 && $gross_income<=6249.99){                     
-                $sss_contribution=442.00; 
-            } else if($gross_income>=6250 && $gross_income<=6749.99){                     
-                $sss_contribution=478.80; 
-            } else if($gross_income>=6750 && $gross_income<=7249.99){ 
-                $sss_contribution=515.70; 
-            } else if($gross_income>=7250 && $gross_income<=7749.99){ 
-                $sss_contribution=552.50; 
-            } else if($gross_income>=7750 && $gross_income<=8249.99){ 
-                $sss_contribution=589.30; 
-            } else if($gross_income>=8250 && $gross_income<=8749.99){                     
-                $sss_contribution=626.20; 
-            } else if($gross_income>=8750 && $gross_income<=9249.99){ 
-                $sss_contribution=663.00; 
-            } else if($gross_income>=9250 && $gross_income<=9749.99){ 
-                $sss_contribution=699.80; 
-            } else if($gross_income>=9750 && $gross_income<=10249.99){ 
-                $sss_contribution=736.70; 
-            } else if($gross_income>=10250 && $gross_income<=10749.99){                     
-                $sss_contribution=773.50; 
-            } else if($gross_income>=10750 && $gross_income<=11249.99){ 
-                $sss_contribution=810.30; 
-            } else if ($gross_income>=11250 && $gross_income<=11749.99){ 
-                $sss_contribution=847.20; 
-            } else if($gross_income>=11750 && $gross_income<=12249.99){ 
-                $sss_contribution=884.00; 
-            } else if($gross_income>=12250 && $gross_income<=12749.99){                     
-                $sss_contribution=920.80; 
-            } else if($gross_income>=12750 && $gross_income<=13249.99){ 
-                $sss_contribution=957.70; 
-            } else if($gross_income>=13250 && $gross_income<=13749.99){                     
-                $sss_contribution=994.50; 
-            } else if($gross_income>=13750 && $gross_income<=14249.99){ 
-                $sss_contribution=1031.30; 
-            } else if($gross_income>=14250 && $gross_income<=14749.99){                     
-                $sss_contribution=1068.20; 
-            } else if($gross_income>=14750 && $gross_income<=15249.99){ 
-                $sss_contribution=1105.00; 
-            } else if($gross_income>=15250 && $gross_income<=15749.99){ 
-                $sss_contribution=1141.80;    
-            } else{ 
-                $sss_contribution=1178.70; 
-            } 
-            */
-
-
-        //PHILHEALTH TABLE CONTRIBUTIIOM
+        
         $philhealth = 100;
-        /*
-            if($gross_income<=8999.99 && $gross_income>=0){ 
-                $philhealth=100.00; 
-            } else if($gross_income>=9000 && $gross_income<=9999.99){ 
-                $philhealth=112.50; 
-            } else if($gross_income>=10000 && $gross_income<=10999.99){                     
-                $philhealth=125.00; 
-            } else if($gross_income>=11000 && $gross_income<=11999.99){                     
-                $philhealth=137.50; 
-            } else if($gross_income>=12000 && $gross_income<=12999.99){                     
-                $philhealth=150.00; 
-            } else if($gross_income>=13000 && $gross_income<=13999.99){                     
-                $philhealth=162.50; 
-            } else if($gross_income>=14000 && $gross_income<=14999.99){                     
-                $philhealth=175.00; 
-            } else if($gross_income>=15000 && $gross_income<=15999.99){ 
-                $philhealth=187.50; 
-            } else if($gross_income>=16000 && $gross_income<=16999.99){                     
-                $philhealth=200.00; 
-            } else if($gross_income>=17000 && $gross_income<=17999.99){ 
-                $philhealth=212.50; 
-            } else if($gross_income>=18000 && $gross_income<=18999.99){                     
-                $philhealth=225.00; 
-            } else if($gross_income>=19000 && $gross_income<=19999.99){ 
-                $philhealth=237.50; 
-            } else if($gross_income>=20000 && $gross_income<=20999.99){                     
-                $philhealth=250.00; 
-            } else if($gross_income>=21000 && $gross_income<=21999.99){ 
-                $philhealth=262.50; 
-            } else if($gross_income>=22000 && $gross_income<=22999.99){                     
-                $philhealth=275.00; 
-            } else if($gross_income>=23000 && $gross_income<=23999.99){ 
-                $philhealth=287.50; 
-            } else if($gross_income>=24000 && $gross_income<=24999.99){ 
-                $philhealth=300.00; 
-            } else if ($gross_income>=25000 && $gross_income<=25999.99){ 
-                $philhealth=312.50; 
-            } else if($gross_income>=26000 && $gross_income<=26999.99){                     
-                $philhealth=325.00; 
-            } else if($gross_income>=27000 && $gross_income<=27999.99){ 
-                $philhealth=337.50; 
-            } else if($gross_income>=28000 && $gross_income<=28999.99){ 
-                $philhealth=350.00; 
-            } else if ($gross_income>=29000 && $gross_income<=29999.99){ 
-                $philhealth=362.50; 
-            } else if ($gross_income>=30000 && $gross_income<=30999.99){ 
-                $philhealth=375.00; 
-            } else if($gross_income>=31000 && $gross_income<=31999.99){ 
-                $philhealth=387.50; 
-            } else if($gross_income>=32000 && $gross_income<=32999.99){                     
-                $philhealth=400.00; 
-            } else if($gross_income>=33000 && $gross_income<=33999.99){ 
-                $philhealth=412.50; 
-            } else if($gross_income>=34000 && $gross_income<=34999.99){ 
-                $philhealth=425.00;                 
-            } else{ 
-                $philhealth=437.50; 
-            } 
-        */
+ 
         //PAGIBIG CONTRIBUTION
         $pagibig=100.00;
 
         //tax CONTRIBUTION
         $tax = $gross_income*.1;
-        /*
-            if($gross_income<=150 && $gross_income>=12500){ 
-                $tax=(($gross_income-0) + 0); 
-            } else if($gross_income>=12501 && $gross_income<=13333){                         
-                $tax=((($gross_income-12500)*.05) + 0); 
-            } else if($gross_income>=13334 && $gross_income<=15000){                         
-                $tax=((($gross_income-13333)*.10) + 41.67); 
-            } else if($gross_income>=15001 && $gross_income<=18333){                         
-                $tax=((($gross_income-15001)*.15) + 208.33); 
-            } else if($gross_income>=18334 && $gross_income<=24167){                         
-                $tax=((($gross_income-18333)*.20) + 708.33); 
-            } else if($gross_income>=24168 && $gross_income<=33333){                         
-                $tax=((($gross_income-24167)*.25) + 1875); 
-            } else if($gross_income>=33334 && $gross_income<=54167){ 
-                $tax=((($gross_income-33333)*.30) + 4166.67); 
-            } else{ 
-                $tax=((($gross_income-54167)*.32) + 10416.67); 
-            } 
-        */
-        /*Other Deductions*/
+
         $sssloan = $_POST['sssloan'];
         $pagibigloan = $_POST['pagibigloan'];
         $facultysavingsdeposit = $_POST['facultysavingsdeposit'];
         $facultysavingsloan = $_POST['facultysavingsloan'];
         $salaryloan = $_POST['salaryloan'];
+        $totalotherdeduction = $_POST['totalotherdeduction'];
         //$totalotherdeduction = $sssloan + $pagibigloan + $facultysavingsdeposit + $facultysavingsloan + $salaryloan ;
 
     }
@@ -276,157 +133,16 @@
         $gross_income = $incomepercutoff + $totalhonorarium+$totalotherincome;
 
         $sss_contribution = $gross_income*0.045;
-    /*
-        if($gross_income>= 1000 && $gross_income<=1249){ 
-            $sss_contribution=73.70; 
-        } else if($gross_income>=1250 && $gross_income<=1749){                     
-            $sss_contribution=110.50; 
-        } else if($gross_income>=1750 && $gross_income<=2249){ 
-            $sss_contribution=147.30; 
-        } else if($gross_income>=2250 && $gross_income<=2749.99){                     
-            $sss_contribution=184.20; 
-        } else if($gross_income>=2750 && $gross_income<=3249.99){                     
-            $sss_contribution=221.00; 
-        } else if($gross_income>=3250 && $gross_income<=3749.99){                     
-            $sss_contribution=257.80; 
-        } else if($gross_income>=3750 && $gross_income<=4249.99){                     
-            $sss_contribution=294.70; 
-        } else if($gross_income>=4250 && $gross_income<=4749.99){                     
-            $sss_contribution=331.50; 
-        } else if($gross_income>=4750 && $gross_income<=5249.99){                     
-            $sss_contribution=368.30; 
-        } else if($gross_income>=5250 && $gross_income<=5749.99){                     
-            $sss_contribution=405.20; 
-        } else if($gross_income>=5750 && $gross_income<=6249.99){                     
-            $sss_contribution=442.00; 
-        } else if($gross_income>=6250 && $gross_income<=6749.99){                     
-            $sss_contribution=478.80; 
-        } else if($gross_income>=6750 && $gross_income<=7249.99){ 
-            $sss_contribution=515.70; 
-        } else if($gross_income>=7250 && $gross_income<=7749.99){ 
-            $sss_contribution=552.50; 
-        } else if($gross_income>=7750 && $gross_income<=8249.99){ 
-            $sss_contribution=589.30; 
-        } else if($gross_income>=8250 && $gross_income<=8749.99){                     
-            $sss_contribution=626.20; 
-        } else if($gross_income>=8750 && $gross_income<=9249.99){ 
-            $sss_contribution=663.00; 
-        } else if($gross_income>=9250 && $gross_income<=9749.99){ 
-            $sss_contribution=699.80; 
-        } else if($gross_income>=9750 && $gross_income<=10249.99){ 
-            $sss_contribution=736.70; 
-        } else if($gross_income>=10250 && $gross_income<=10749.99){                     
-            $sss_contribution=773.50; 
-        } else if($gross_income>=10750 && $gross_income<=11249.99){ 
-            $sss_contribution=810.30; 
-        } else if ($gross_income>=11250 && $gross_income<=11749.99){ 
-            $sss_contribution=847.20; 
-        } else if($gross_income>=11750 && $gross_income<=12249.99){ 
-            $sss_contribution=884.00; 
-        } else if($gross_income>=12250 && $gross_income<=12749.99){                     
-            $sss_contribution=920.80; 
-        } else if($gross_income>=12750 && $gross_income<=13249.99){ 
-            $sss_contribution=957.70; 
-        } else if($gross_income>=13250 && $gross_income<=13749.99){                     
-            $sss_contribution=994.50; 
-        } else if($gross_income>=13750 && $gross_income<=14249.99){ 
-            $sss_contribution=1031.30; 
-        } else if($gross_income>=14250 && $gross_income<=14749.99){                     
-            $sss_contribution=1068.20; 
-        } else if($gross_income>=14750 && $gross_income<=15249.99){ 
-            $sss_contribution=1105.00; 
-        } else if($gross_income>=15250 && $gross_income<=15749.99){ 
-            $sss_contribution=1141.80;    
-        } else{ 
-            $sss_contribution=1178.70; 
-        } 
-        
-    */
+
         //PHILHEALTH TABLE CONTRIBUTIIOM
         $philhealth = 100;
-        /*
-            if($gross_income<=8999.99 && $gross_income>=0){ 
-                $philhealth=100.00; 
-            } else if($gross_income>=9000 && $gross_income<=9999.99){ 
-                $philhealth=112.50; 
-            } else if($gross_income>=10000 && $gross_income<=10999.99){                     
-                $philhealth=125.00; 
-            } else if($gross_income>=11000 && $gross_income<=11999.99){                     
-                $philhealth=137.50; 
-            } else if($gross_income>=12000 && $gross_income<=12999.99){                     
-                $philhealth=150.00; 
-            } else if($gross_income>=13000 && $gross_income<=13999.99){                     
-                $philhealth=162.50; 
-            } else if($gross_income>=14000 && $gross_income<=14999.99){                     
-                $philhealth=175.00; 
-            } else if($gross_income>=15000 && $gross_income<=15999.99){ 
-                $philhealth=187.50; 
-            } else if($gross_income>=16000 && $gross_income<=16999.99){                     
-                $philhealth=200.00; 
-            } else if($gross_income>=17000 && $gross_income<=17999.99){ 
-                $philhealth=212.50; 
-            } else if($gross_income>=18000 && $gross_income<=18999.99){                     
-                $philhealth=225.00; 
-            } else if($gross_income>=19000 && $gross_income<=19999.99){ 
-                $philhealth=237.50; 
-            } else if($gross_income>=20000 && $gross_income<=20999.99){                     
-                $philhealth=250.00; 
-            } else if($gross_income>=21000 && $gross_income<=21999.99){ 
-                $philhealth=262.50; 
-            } else if($gross_income>=22000 && $gross_income<=22999.99){                     
-                $philhealth=275.00; 
-            } else if($gross_income>=23000 && $gross_income<=23999.99){ 
-                $philhealth=287.50; 
-            } else if($gross_income>=24000 && $gross_income<=24999.99){ 
-                $philhealth=300.00; 
-            } else if ($gross_income>=25000 && $gross_income<=25999.99){ 
-                $philhealth=312.50; 
-            } else if($gross_income>=26000 && $gross_income<=26999.99){                     
-                $philhealth=325.00; 
-            } else if($gross_income>=27000 && $gross_income<=27999.99){ 
-                $philhealth=337.50; 
-            } else if($gross_income>=28000 && $gross_income<=28999.99){ 
-                $philhealth=350.00; 
-            } else if ($gross_income>=29000 && $gross_income<=29999.99){ 
-                $philhealth=362.50; 
-            } else if ($gross_income>=30000 && $gross_income<=30999.99){ 
-                $philhealth=375.00; 
-            } else if($gross_income>=31000 && $gross_income<=31999.99){ 
-                $philhealth=387.50; 
-            } else if($gross_income>=32000 && $gross_income<=32999.99){                     
-                $philhealth=400.00; 
-            } else if($gross_income>=33000 && $gross_income<=33999.99){ 
-                $philhealth=412.50; 
-            } else if($gross_income>=34000 && $gross_income<=34999.99){ 
-                $philhealth=425.00;                 
-            } else{ 
-                $philhealth=437.50; 
-            } 
-        */
+
         //PAGIBIG CONTRIBUTION
         $pagibig=100.00;
 
         //tax CONTRIBUTION
         $tax = $gross_income*.1;
-        /*
-            if($gross_income<=150 && $gross_income>=12500){ 
-                $tax=(($gross_income-0) + 0); 
-            } else if($gross_income>=12501 && $gross_income<=13333){                         
-                $tax=((($gross_income-12500)*.05) + 0); 
-            } else if($gross_income>=13334 && $gross_income<=15000){                         
-                $tax=((($gross_income-13333)*.10) + 41.67); 
-            } else if($gross_income>=15001 && $gross_income<=18333){                         
-                $tax=((($gross_income-15001)*.15) + 208.33); 
-            } else if($gross_income>=18334 && $gross_income<=24167){                         
-                $tax=((($gross_income-18333)*.20) + 708.33); 
-            } else if($gross_income>=24168 && $gross_income<=33333){                         
-                $tax=((($gross_income-24167)*.25) + 1875); 
-            } else if($gross_income>=33334 && $gross_income<=54167){ 
-                $tax=((($gross_income-33333)*.30) + 4166.67); 
-            } else{ 
-                $tax=((($gross_income-54167)*.32) + 10416.67); 
-            } 
-        */
+  
 
                         /*Other Deductions*/
         $sssloan = $_POST['sssloan'];
@@ -434,9 +150,11 @@
         $facultysavingsdeposit = $_POST['facultysavingsdeposit'];
         $facultysavingsloan = $_POST['facultysavingsloan'];
         $salaryloan = $_POST['salaryloan'];
-        $totalotherdeduction = $sssloan + $pagibigloan + $facultysavingsdeposit + $facultysavingsloan + $salaryloan;
+        
 
-        $totaldeductions = (float)$sss_contribution + (float)$philhealth + (float)$pagibig+ (float)$tax+ (float)$sssloan + (float)$pagibigloan + (float)$facultysavingsdeposit + (float)$facultysavingsloan + (float)$salaryloan ; 
+        $totalotherdeduction = $_POST['totalotherdeduction'];
+
+        $totaldeductions = (float)$sss_contribution + (float)$philhealth + (float)$pagibig+ (float)$tax+ (float)$sssloan + (float)$pagibigloan + (float)$facultysavingsdeposit + (float)$facultysavingsloan + (float)$salaryloan + (float)$totalotherdeduction ; 
         $netincome = (float)$gross_income - (float)$totaldeductions; 
 
     }
@@ -721,7 +439,7 @@
                             <div class="mb-1 row">
                                 <label for="otherdeductions" class="col-sm-5 col-form-label">Others</label>
                                 <div class="col-sm-7">
-                                    <input type="text" value="<?php echo($totalotherdeduction) ?>" name="totalotherdeduction"  disabled class="form-control text-end" id="otherdeductions" name="otherdeductions"  >
+                                    <input type="text" value="<?php echo($totalotherdeduction) ?>" name="totalotherdeduction"   class="form-control text-end" id="otherdeductions"  placeholder="0.00" >
                                 </div>
                             </div>
                         </fieldset>
