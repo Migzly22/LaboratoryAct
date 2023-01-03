@@ -1,3 +1,5 @@
+alert(123)
+
 const numpad = document.getElementById('numpad')
 var activestatus = true;
 var discount = 0
@@ -48,7 +50,10 @@ numpad.addEventListener('click',()=>{
 const newbtn = document.getElementById('newbtn')
 newbtn.addEventListener('click',()=>{
     let activestat1 = document.querySelector('.active')
-    activestat1.classList.remove('active')
+    if (activestat1 != null) {
+        activestat1.classList.remove('active')
+    }
+    
 
     let lefty = document.getElementsByClassName('form-control')
     for (let i = 0; i < lefty.length; i++) {
@@ -63,7 +68,9 @@ newbtn.addEventListener('click',()=>{
 const cancelbtn = document.getElementById('cancel')
 cancelbtn.addEventListener('click',()=>{
     let activestat1 = document.querySelector('.active')
-    activestat1.classList.remove('active')
+    if (activestat1 != null) {
+        activestat1.classList.remove('active')
+    }
 
     let lefty = document.getElementsByClassName('form-control')
     for (let i = 0; i < lefty.length; i++) {
@@ -167,11 +174,21 @@ change.addEventListener('click',()=>{
     let cash = document.getElementById('cashrendered').value
 
     if(cash.length == 0) {
-        alert("Please Enter The Cash Amount First")
+        Swal.fire(
+            'Oops...',
+            'Please Enter The Cash Amount First',
+            'error'
+        )
     }else if(parseInt(cash) < parseInt(totalprice)) {
-        alert("Wrong Cash Amount.. Please Try Again")
+        Swal.fire(
+            'Oops...',
+            'Wrong Cash Amount.. Please Try Again',
+            'error'
+        )
+    }else{
+        document.getElementById('changecash').value = parseInt(cash) - parseInt(totalprice)
     }
 
-    document.getElementById('changecash').value = parseInt(cash) - parseInt(totalprice)
+    
 
 })

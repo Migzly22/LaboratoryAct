@@ -530,7 +530,7 @@
 
     <form method="post" class="">
         <div class=" btnscontrol d-flex justify-content-center gap-3  align-items-center">
-            <a class="btn" id="Orderdetail" name="od">Oder Details</a>
+            <a class="btn" id="Orderdetail" name="od">Order Details</a>
             <button class="btn" id="calculate" name="calculate">Calculate</button>
             <button class="btn" id="changebutton" name="changebutton">Change</button>
             <button class="btn" id="new" name="new">New</button>

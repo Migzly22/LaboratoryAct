@@ -191,7 +191,7 @@
     <link rel="stylesheet" href="./CSS/style2.css">
 
     <script src="./js/file.js" defer></script>
-    <script src="./js/web21.js" defer></script>
+    <script src="./js/web2.js" defer></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">

@@ -25,7 +25,7 @@ $(document).ready(function() {
     
         //FUNCTIONS FOR THE RADIO BUTTONS AND CHECKBOXES
         function KPBundle1() {
-    
+            clickme(true)
             $("#bundle1").prop( "checked", true );
             $("#bundle2").prop( "checked", true );
             $("#bundle3").prop( "checked", true );
@@ -39,6 +39,8 @@ $(document).ready(function() {
             document.getElementById("price").value = 415.00;
             document.getElementById("summary").value = "K&P BUNDLE 1";
             document.getElementById("quantity").focus();
+
+            
             
         }
     
@@ -48,7 +50,7 @@ $(document).ready(function() {
         }
     
         function KPBundle2() {
-    
+            clickme(true)
             $("#bundle1").prop( "checked", false );
             $("#bundle2").prop( "checked", false );
             $("#bundle3").prop( "checked", false );
@@ -179,156 +181,213 @@ $(document).ready(function() {
                 
     
         }
+
+function clickme(param) {
+    let bools = document.getElementsByClassName("sub-menu")[0].style.display
+
+    if (param){
+        if(bools != "block"){
+            document.getElementById('Orderdetail').click(); 
+        }
+    }else{
+        if(bools != "none"){
+            document.getElementById('Orderdetail').click(); 
+        }
+        
+    }
+
     
+}
+
         //ITEMS -- IMAGES (ITEMS MENU )
         $("#order1").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(50.00,"Iced Coffee");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
     
         $("#order2").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(50.00,"Cappuccino");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
         $("#order3").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(50.00,"Americano");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
     
         $("#order4").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(50.00,"Espresso Martini");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
     
         $("#order5").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(50.00,"Frappe");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
         $("#order6").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(250.00,"Strawberry Cake");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
     
         $("#order7").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(250.00,"Chocolate Cake");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
     
         $("#order8").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(250.00,"Ice Cream Cake");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
     
         $("#order9").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(250.00,"Blackforest Cake");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
     
         $("#order10").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(250.00,"BlueBerry Cake");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
     
         $("#order11").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(75.00,"Éclair");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
     
         $("#order12").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(75.00,"Cream Puffs");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
     
         $("#order13").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(75.00,"Macarons");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
         $("#order14").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(75.00,"Crossant");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
         $("#order15").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(75.00,"BlueBerry Pie");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
         $("#order16").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(40.00,"Melon Pan");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
         $("#order17").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(40.00,"Red Bean Bun");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
         $("#order18").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(40.00,"Parmesan Cheese Bun");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
         $("#order19").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(40.00,"Soft Milk Bun");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
         $("#order20").click(function(e) {
         if ($(this).prop("checked") == true ) {
             price_ordersummary(40.00,"Milky Cheese Roll");
+            clickme(true)
         } else {
             price_ordersummary_empty();
+            clickme(false)
         }
         });
     
