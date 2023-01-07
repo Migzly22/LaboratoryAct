@@ -1,4 +1,4 @@
-alert(123)
+
 
 const numpad = document.getElementById('numpad')
 var activestatus = true;
