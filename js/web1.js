@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    alert(12)
     //DECLARATION OF GLOBAL VARIABLES
     
         var price = 0;
