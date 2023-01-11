@@ -44,6 +44,8 @@ net.addEventListener('click',(e)=>{
     container.push(document.getElementsByTagName('input')[28].value.length)
     container.push(document.getElementsByTagName('input')[29].value.length)
     container.push(document.getElementsByTagName('input')[30].value.length)
+    container.push(document.getElementsByTagName('input')[31].value.length)
+ 
 
     let breaking = false;
     for (let i = 0; i < container.length; i++) {

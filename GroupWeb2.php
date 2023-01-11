@@ -155,7 +155,13 @@
         $totalotherdeduction = $_POST['totalotherdeduction'];
 
         $totaldeductions = (float)$sss_contribution + (float)$philhealth + (float)$pagibig+ (float)$tax+ (float)$sssloan + (float)$pagibigloan + (float)$facultysavingsdeposit + (float)$facultysavingsloan + (float)$salaryloan + (float)$totalotherdeduction ; 
-        $netincome = (float)$gross_income - (float)$totaldeductions; 
+        
+
+        if ((float)$gross_income > (float)$totaldeductions){
+            $netincome = (float)$gross_income - (float)$totaldeductions; 
+        }else{
+            $negaalert = "true";
+        }
 
     }
     elseif (isset($_POST['new'])) {
@@ -194,6 +200,21 @@
     <script src="./js/web2.js" defer></script>
 </head>
 <body>
+    <?php
+    if (isset($negaalert)){
+        echo "<script>
+        Swal.fire(
+            'Oops...',
+            'Net Income is a negative value',
+            'error'
+        )
+        </script>
+        
+        ";
+        unset($negaalert);
+    }
+
+    ?>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid d-flex justify-content-between">
             <a class="navbar-brand" href="#">
