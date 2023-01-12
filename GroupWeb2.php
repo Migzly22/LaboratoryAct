@@ -94,7 +94,7 @@
         $gross_income = $incomepercutoff + $totalhonorarium + $totalotherincome;
 
         /*Regular Deductions*/
-        $sss_contribution = $gross_income*.045;
+        $sss_contribution = $gross_income*0.1;
         
         $philhealth = 100;
  
@@ -132,7 +132,7 @@
         /*Income Summary*/
         $gross_income = $incomepercutoff + $totalhonorarium+$totalotherincome;
 
-        $sss_contribution = $gross_income*0.045;
+        $sss_contribution = $gross_income*0.1;
 
         //PHILHEALTH TABLE CONTRIBUTIIOM
         $philhealth = 100;
