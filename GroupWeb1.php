@@ -30,10 +30,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./CSS/style12.css">
+    <link rel="stylesheet" href="./CSS/newcss.css">
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./js/web1.js" defer></script>
+    <script src="./js/web11.js" defer></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -109,12 +110,7 @@
                 
             </div>
 
-            <div class="mb-2 ">
-                <h5 class="text-center">Order Image</h5>
-                <div class="orderimg shadow-lg p-3">
 
-                </div>
-            </div>
         </div>
         <div class="rightside col-md-9">
             <div class="container">
@@ -538,11 +534,13 @@
             <button class="btn" id="exit" name="exit">Exit</button>
         </div>
         <div class="sub-menu" >
-            <div class="leftside p-3 orderdetails">
+            <div class="leftside p-3 pb-0 orderdetails">
+                <!--
                 <h5 class="text-center text-color">Order Details</h3>
+-->
                 <form  method="post" action="">
                     <div class="d-flex justify-content-between">
-                        <div class="col-sm-4 text-color">
+                        <div class="col-sm-4 text-color px-3">
                             <div class="mb-3 row">
                                 <label for="price" class="col-sm-5 col-form-label">Price</label>
                                 <div class="col-sm-7">
@@ -568,7 +566,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4 text-color">
+                        <div class="col-sm-4 text-color px-3">
                             <div class="mb-3 row">
                                 <label for="total_bills" class="col-sm-5 col-form-label">Total Bills</label>
                                 <div class="col-sm-7">
@@ -594,10 +592,35 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mb-3 text-color">
-                            <label for="summary" class="form-label">ORDER SUMMARY</label>
-                            <textarea class="form-control"  id="summary" name="summary" rows="4" cols="50" readonly></textarea>
+                        <div class="col-sm-4 text-color px-3">
+                            <div class="mb-3 row">
+                                <label for="summary" class="col-sm-5 col-form-label">Order Summary</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="summary" name="summary" readonly >
+                                </div>
+                            </div>
+                            <div class="mb-2">
+<!--
+                                <h5 class="text-center orderimgtext">Order Image</h5>
+
+-->
+                                <div class="orderimg">
+                                    <img src="./IMG/dish4.jpg" alt="" srcset="" id="imagechanger">
+                                </div>
+                            </div>
+                            
+              
+                            <!--              
+                            <div class="d-flex">
+                                <label for="summary" class="form-label">Order Summary</label>
+                                <textarea class="form-control"  id="summary" name="summary" rows="1" cols="50" readonly></textarea>
+                            </div>
+                            -->
+                            
+                            
+                            
                         </div>
+   
                     </div>
 
                 </form>
@@ -613,8 +636,8 @@
         //jquery for toggle sub menus
         $('#Orderdetail').click(function(){
             let parentname = $(this).parent()
-            console.log( $('#Orderdetail'))
-            console.log(parentname)
+            //console.log( $('#Orderdetail'))
+            //console.log(parentname)
             parentname.next('.sub-menu').slideToggle();
         //$(this).next('.sub-menu').slideToggle();
         //$(this).find('.dropdown').toggleClass('rotate');

@@ -1,0 +1,11 @@
+.orderimg{
+    background: white;
+    width: 100%;
+    height: 21vh;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.orderimg img{
+    width: 100%;
+    height: 100%;
+}
