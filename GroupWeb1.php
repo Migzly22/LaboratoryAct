@@ -1,12 +1,15 @@
 <?php
     session_start();
+    ob_start();
     if (isset($_SESSION["logged"])) {
         if ( $_SESSION["logged"] != "Web1") {
             header("Location:./index.php");
+            ob_end_flush();
             exit;
         }
     }else{
         header("Location:./index.php");
+        ob_end_flush();
         exit;
     }
 
@@ -14,6 +17,7 @@
     if (isset($_POST["exit"])){
         unset($_SESSION["logged"]);
         header("Location:./index.php");
+        ob_end_flush();
         exit;
     }
 
@@ -605,7 +609,7 @@
 
 -->
                                 <div class="orderimg">
-                                    <img src="./IMG/dish4.jpg" alt="" srcset="" id="imagechanger">
+                                    <img src="https://s3.amazonaws.com/pastperfectonline/museumlogos/logos/1090/original/NoImageAvailableLarge.jpg" alt="" srcset="" id="imagechanger">
                                 </div>
                             </div>
                             

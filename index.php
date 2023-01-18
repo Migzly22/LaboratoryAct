@@ -1,4 +1,9 @@
+<?php
+        session_start();
+        ob_start();
 
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +17,7 @@
 
 <body>
     <?php
-        session_start();
+
 
         $userauth = [
             "Web1" => "Website1",
@@ -23,15 +28,18 @@
         function loc($keys){
             if ($keys == "Web1") {
                 $_SESSION["logged"] = "Web1";
-                header("Location:./Groupweb1.php");
+                header("Location:./GroupWeb1.php");
+                ob_end_flush();
                 exit;
             }else if ($keys == "Web2") {
                 $_SESSION["logged"] = "Web2";
-                header("Location:./Groupweb2.php");
+                header("Location:./GroupWeb2.php");
+                ob_end_flush();
                 exit;
             }else if ($keys == "Web3") {
                 $_SESSION["logged"] = "Web3";
-                header("Location:./Groupweb3.php");
+                header("Location:./GroupWeb3.php");
+                ob_end_flush();
                 exit;
             }
         }
@@ -70,14 +78,14 @@
 
 
     ?>
-	<img class="wave" src="img/wave1.png">
+	<img class="wave" src="./IMG/wave1.png">
 	<div class="container">
 		<div class="img">
-			<img src="img/alogo2.svg">
+			<img src="./IMG/alogo2.svg">
 		</div>
 		<div class="login-content">
 			<form action="" method="POST">
-				<img src="img/userlogo.png">
+				<img src="./IMG/userlogo.png">
 				<h2 class="title">Welcome</h2>
            		<div class="input-div one">
            		   <div class="i">

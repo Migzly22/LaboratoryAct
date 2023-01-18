@@ -1,18 +1,22 @@
 <?php
     session_start();
+    ob_start();
     if (isset($_SESSION["logged"])) {
         if ( $_SESSION["logged"] != "Web3") {
             header("Location:./index.php");
+            ob_end_flush();
             exit;
         }
     }else{
         header("Location:./index.php");
+        ob_end_flush();
         exit;
     }
 
     if (isset($_POST["exit"])){
         unset($_SESSION["logged"]);
         header("Location:./index.php");
+        ob_end_flush();
         exit;
     }
 

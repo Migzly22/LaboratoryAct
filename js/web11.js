@@ -20,9 +20,10 @@ $(document).ready(function() {
             document.getElementById("price").value = "";
             document.getElementById("summary").value = "";
         }
-    
+
         //FUNCTIONS FOR THE RADIO BUTTONS AND CHECKBOXES
         function KPBundle1() {
+            document.getElementById("imagechanger").src = "./IMG/bundle1.jpg"
             new_button()
             clickme(true)
             $("#bundle1").prop( "checked", true );
@@ -49,6 +50,7 @@ $(document).ready(function() {
         }
     
         function KPBundle2() {
+            document.getElementById("imagechanger").src = "./IMG/bundle2.jpg"
             new_button()
             clickme(true)
             $("#bundle1").prop( "checked", false );
@@ -140,7 +142,7 @@ $(document).ready(function() {
         }
     
         function new_button () {
-    
+           
             //CLEAR ALL TEXTBOXES
             document.getElementById("price").value = "";
             document.getElementById("quantity").value = "";
@@ -198,6 +200,7 @@ function clickme(param) {
 
     
 }
+
 function imgchanging123(paramname){
     let a = $(paramname).parent().parent().parent().children()[0]
     let imgname = a.children[0].src
@@ -503,6 +506,7 @@ function imgchanging123(paramname){
     
         $("#new").click(function(e) {
             e.preventDefault();
+            document.getElementById("imagechanger").src = "https://s3.amazonaws.com/pastperfectonline/museumlogos/logos/1090/original/NoImageAvailableLarge.jpg"
             new_button();
     
         });
